@@ -45,6 +45,9 @@ def logout():
     session.pop('user', None)
     return redirect(url_for('login'))
 
+@app.route('/newindex', methods=['GET'])
+def nindex():
+    return render_template('new_index.html')
 # RUN
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
