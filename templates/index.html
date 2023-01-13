@@ -18,7 +18,7 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 30px;
-            background-color: #A6ECE0;
+            background-color: #CDD5E0;
             overflow-x:hidden;
             color: #ababab; }
           
@@ -610,13 +610,49 @@
           }
             
           }
+          .wrap {
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .logo {
+            overflow: hidden;
+            text-align: left;
+            position: relative;
+            height: 60px;
+            color: #1F6C8B;
+            font-family: Arial;
+            margin-left: 20px;
+            margin-top: 5;
+          }
+
+          .logoutbutton {
+            background-color: #F5F5F5;
+            font-family: "Open Sans", sans-serif;
+            border: none;
+            color: #000000;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+          }
           
     </style> 
 
   </head>
 
   <body>
-    <h1>>>> SILVER | ML APP COLLECTION</h1>
+    <div class="wrap">
+      <div class="logo">
+        <h1>>>> SILVER | ML APP COLLECTION</h1>
+      </div>
+      <div>
+        <a href="http://127.0.0.1:5000/logout">
+          <button class="logoutbutton">LOGOUT</button>
+        </a>
+      </div>
+    </div>
 
 <main class="site-wrapper">
   <div class="pt-table desktop-768">
@@ -742,12 +778,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="/tinko" class="hex-content">
+                                        <a href="http://127.0.0.1:5000/test" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">TINKO</span>
+                                                <span class="title">TEST</span>
                                             </span>
                                             <svg height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>

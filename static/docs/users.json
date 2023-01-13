@@ -1,0 +1,12 @@
+{
+    "users": [
+    {
+        "email": "kenzov",
+        "password": "asdf1234"
+    },
+    {
+        "email": "gksakic@gmail.com",
+        "password": "asdf1234"
+    }
+]
+}
