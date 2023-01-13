@@ -1,12 +1,18 @@
-import json
-import os
+import sqlite3
+import sys
+from pathlib import Path
+sys.path.append(str(Path('.').absolute()))
+import const
 
-def check_login(email, password):
-    login_data = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static', 'docs', 'users.json')
-    with open(login_data) as f:
-        users = json.load(f)["users"]
-    for user in users:
-        if user['email'] == email and user['password'] == password:
-            return 200
-    return 400
-
+def check_login(username, password):
+    conn = sqlite3.connect(const.DB_PATH)
+    cur = conn.cursor()
+    cur.execute(f"SELECT * FROM users WHERE username='{username}' AND password='{password}';")
+    user = cur.fetchall()
+    conn.commit()
+    conn.close()
+    
+    if len(user) > 0:
+        return True
+    else:
+        return False

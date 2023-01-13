@@ -610,13 +610,49 @@
           }
             
           }
+          .wrap {
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          .logo {
+            overflow: hidden;
+            text-align: left;
+            position: relative;
+            height: 60px;
+            color: #1F6C8B;
+            font-family: Arial;
+            margin-left: 20px;
+            margin-top: 5;
+          }
+
+          .logoutbutton {
+            background-color: #F5F5F5;
+            font-family: "Open Sans", sans-serif;
+            border: none;
+            color: #000000;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+          }
           
     </style> 
 
   </head>
 
   <body>
-    <h1>>>> SILVER | ML APP COLLECTION</h1>
+    <div class="wrap">
+      <div class="logo">
+        <h1>>>> SILVER | ML APP COLLECTION</h1>
+      </div>
+      <div>
+        <a href="http://127.0.0.1:5000/logout">
+          <button class="logoutbutton">LOGOUT</button>
+        </a>
+      </div>
+    </div>
 
 <main class="site-wrapper">
   <div class="pt-table desktop-768">
