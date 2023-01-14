@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from codes.login import check_login
+from datetime import timedelta
 import const
 
 # CONFIG
 app = Flask(__name__)
 app.config['SECRET_KEY'] = const.SECRET_KEY
-    
+app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=30)
+ 
 # ROUTING
 @app.route('/', methods=['GET'])
 def initialize():
@@ -22,6 +24,7 @@ def login():
             login_res = check_login(request.form['username'], request.form['password'])
             if login_res:
                 session['user'] = request.form['username']
+                session.permanent = True
                 return redirect(url_for('index'))
             else:
                 return render_template('login.html')
@@ -48,6 +51,7 @@ def logout():
 @app.route('/newindex', methods=['GET'])
 def nindex():
     return render_template('new_index.html')
+
 # RUN
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
