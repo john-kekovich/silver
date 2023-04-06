@@ -1,0 +1,163 @@
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    background-image: url('./../img/background.jpg');
+    background-position: center;
+    /* background-size: 100%; */
+    /* background-repeat: no-repeat; */
+
+}
+
+/* BANNER */
+.top_part {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    height: 110px;
+    background-image: url('./../img/banner.jpg');
+    /* background-repeat: no-repeat; */
+    border-bottom: 5px solid white;
+}
+
+/* APP TITLE */
+.header1 {
+    position: absolute;
+    top: 5px;
+    font-size: 30px;
+    margin-bottom: 1px;
+    color: #fafafa;
+    text-align: center;
+    -webkit-text-stroke: 1px rgba(255, 166, 0, 0.329);
+}
+
+/* APP DESCRIPTION */
+.header2 {
+    position: absolute;
+    bottom: 5px;
+    font-size: 35px;
+    color: #d1d1d1;
+    text-align: center;
+}
+
+/* WHOLE PAGE CONTAINER */
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* PALETTE BUTTONS */
+.button_group {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.btn_app {
+    background-image: linear-gradient(to right, #cecece 0%, #e7e7e7 51%, #cecece 100%);
+    background-color: #CDD5E0;
+    border: 0px solid white;
+    border-radius: 2px;
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /* line-height: 150px; */
+    /* box-shadow: 2px 4px; */
+    font-size: 20px;
+    margin: 10px auto;
+    border: 2px solid #181818; 
+
+}
+
+.btn_app:hover {
+    background-image: linear-gradient(to right, #dadada 0%, #f1f1f1 51%, #dadada 100%);
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #000000;
+    text-decoration: none;
+}
+
+.btn_app:active {
+    background-image: linear-gradient(to right, #ff7b004f 0%, #e7e7e7 51%, #ff7b004f 100%);
+    border-radius: 0px;
+    color: black;
+}
+
+.btn_header {
+    font-size: 20px;
+    line-height: 100px;
+    margin-bottom: -30px;
+}
+
+.btn_desc {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.btn_img {
+    color: white;
+    bottom: 40%;
+}
+
+
+/* NAV BAR CONTAINER */
+.nav_container {
+    background-color: #3a3a3a;
+}
+
+
+.nav-link {
+    transition: 0.2s;
+    color: rgb(224, 224, 224);
+    font-weight: 550;
+}
+
+.nav-link:hover {
+    background-color: rgb(121, 121, 121);
+    transition: 0.6s;
+    color: white;
+    border-radius: 3px;
+}
+
+.nav-link:visited {
+    color: rgb(255, 255, 255);
+}
+
+.nav-link:active {
+    color: rgb(255, 145, 0);
+}
+
+
+/* MODAL */
+.modal-header {
+    background-color: #3a3a3a;
+}
+
+/* MODAL HEADER TABS */
+.nav_link {
+    border-width: 0px;
+    font-size: 18px;
+    background-color: #3a3a3a;
+    color: rgb(209, 209, 209);
+    margin-right: 10px;
+    font-weight: 500;;
+}
+
+.nav_link:hover, .modal-title {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    font-size: 18px;
+    color: orange;
+}
+
+.modal_content {
+    color: black;
+}
