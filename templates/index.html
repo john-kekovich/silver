@@ -3,121 +3,157 @@
 <head>  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../static/css/style.css">
 
 <title>Silver App Overview</title>  
-<style>   
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #1e2530;
-    }
-    
-    a, a:hover {
-        text-decoration:none !important;
-        color: #1e2530;
-    }
+</head> 
 
-    h4 {
-        font-weight: bold
-        vertical-align: middle;
-    }
-
-    h5 {
-        font-weight: bold
-        vertical-align: middle;
-    }
-
-
-    .wrap {
-        display: flex;
-        justify-content: space-between;
-        background-color: #CDD5E0;
-        height: 50px;
-        border-bottom: 2px solid white;
-      }
+<body> 
       
-      .logo {
-        overflow: hidden;
-        vertical-align: middle;
-        position: relative;
-        color: black;
-        font-family: Arial;
-        margin-left: 10px;
-        padding-top: 10px;
-      }
+    <div class="container-fluid">
 
-      .btn_logout {
-        display: inline-block;
-        height: 100%;
-        background-color: #CDD5E0;
-        font-family: "Open Sans", sans-serif;
-        border: none;
-        color: black;
-        padding-top: 12%;
-        padding-bottom: 5%;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin-right: 10px;
-      }
-
-      .btn-sq-lg {
-        width: 150px !important;
-        height: 150px !important;
-      }
-
-      .btn_app {
-        background-color: #CDD5E0;
-        border: 0px solid white;
-        border-radius: 10px;
-        height: 10vh;
-        width: 30vw;
-        text-align: center;
-        line-height: 10vh;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        letter-spacing: 2px;
-        font-weight: bold;
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .btn_app:hover {
-        background-color: #d2d9db;
-        border: 2px solid #ff0147;
-        border-radius: 6px;
-      }
-
-      .top_part {
-        height: 100px;
-      }
-
-      .container {
-        margin-right: auto;
-        margin-left: auto;
-      }
-</style>   
-</head>    
-<body>    
-    <div class="wrap">
-      <div class="logo">
-        <h4>SILVER | ML App Collection</h4>
+      <div class="row top_part">
+          <div class="header1">SILVER RUSH</div>
+          <div class="header2">APP COLLECTION</div>
       </div>
-      <div>
-        <a href="http://127.0.0.1:5000/logout">
-          <button class="btn_logout"><h5>Logout</h5></button>
-        </a>
+
+      <!-- <div class="wrap">
+        <div class="logo">
+          <h4>ABOUT</h4>
+        </div>
+        <div>
+          <a href="http://127.0.0.1:5000/logout">
+            <button class="btn_logout"><h5>Logout</h5></button>
+          </a>
+        </div>
+      </div> -->
+      <div class="nav_container">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#infoModal">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#samplesModal">Data Samples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="http://127.0.0.1:5000/logout" >Logout</a>
+          </li>
+        </ul>
       </div>
-    </div>
+      <div class="row mt-3">
+        <div class="button_group">
+          <div class="row mt-3">
+            <div class="btn_app">
+              <div class="btn_header">DIGGER</div>
+              <div class="btn_img"><object data="./../static/img/line-chart-line.svg" width="50" height="50"> </object></div>
+              <div class="btn_desc">Regression Analysis</div>
+            </div>
+            <div class="btn_app">
+              <div class="btn_header">JUGGLER</div>
+              <div class="btn_img"><object data="./../static/img/funds-box-line.svg" width="50" height="50"> </object></div>
+              <div class="btn_desc">Time Series Forecasting</div>
+            </div>
+            <div class="btn_app">
+                <div class="btn_header">MOLE</div>
+                <div class="btn_img"><object data="./../static/img/booklet-line.svg" width="50" height="50"> </object></div>
+                <div class="btn_desc">Periodical Data Collection</div>
+              </div>             
+            <div class="btn_app">
+              <div class="btn_header">HAMMER</div>
+              <div class="btn_img"><object data="./../static/img/file-list-3-line.svg" width="50" height="50"> </object></div>
+              <div class="btn_desc">Goal Setting</div>
+            </div> 
+            <div class="btn_app">
+              <div class="btn_header">TEST1</div>
+              <div class="btn_img"><object data="./../static/img/flask-line.svg" width="50" height="50"> </object></div>
+              <div class="btn_desc">test button</div>
+            </div>             
+            <div class="btn_app">
+              <div class="btn_header">TEST2</div>
+              <div class="btn_img"><object data="./../static/img/test-tube-line.svg" width="50" height="50"> </object></div>
+              <div class="btn_desc">test button</div>
+            </div>           
+          </div>
+        </div>
+      </div>
 
-    <div class="row top_part">XXX</div>
-
-    <div class="container">
-      <a href="http://127.0.0.1:5001/"><div class="btn_app">DIGGER</div></a>
-      <div class="btn_app">JUGGLER</div>
-      <div class="btn_app">MOLE</div>
-      <div class="btn_app">HAMMER</div>
-      <a href="http://127.0.0.1:5000/test"><div class="btn_app">TEST</div></a>
     </div>
 </body>     
 </html>  
+
+<!--
+<a href="http://127.0.0.1:5001/"></a>
+<a href="http://127.0.0.1:5000/test"></a>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="nav nav-pills nav-fill">
+          <button class="nav_link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+          <button class="nav_link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#app1" type="button" role="tab" aria-controls="app1" aria-selected="false">Digger</button>
+          <button class="nav_link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#app2" type="button" role="tab" aria-controls="app2" aria-selected="false">Juggler</button>
+          <button class="nav_link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#app3" type="button" role="tab" aria-controls="app3" aria-selected="false">Mole</button>
+          <button class="nav_link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#app4" type="button" role="tab" aria-controls="app4" aria-selected="false">Hammer</button>
+        </nav>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="home-tab">
+            <div class="modal_content">
+            This is a collection of applications which are developed for learning and testing purpose. Please feel free to try the apps.
+            </div>
+          </div>
+          <div class="tab-pane fade" id="app1" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="modal_content">
+              Digger
+            </div>
+          </div>
+          <div class="tab-pane fade" id="app2" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="modal_content">
+              Juggler
+            </div>
+          </div>
+          <div class="tab-pane fade" id="app3" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="modal_content">
+              Mole
+            </div>
+          </div>
+          <div class="tab-pane fade" id="app4" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="modal_content">
+              Hammer
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="samplesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Data Samples</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
